@@ -1,0 +1,24 @@
+You are an expert tasked with formulating novel and robust hypotheses to address the following objective.
+
+Mode: {mode}
+Goal: {goal}
+Criteria for a strong hypothesis: {preferences}
+Existing hypothesis (if applicable): {source_hypothesis}
+Instructions: {instructions}
+
+{mode_specific_content}
+
+Proposed hypothesis (detailed description for domain experts):
+- Present a clear, testable hypothesis that addresses the research goal
+- Include specific entities, mechanisms, and anticipated outcomes
+- Provide scientific rationale based on current knowledge
+- Suggest experimental approaches to test the hypothesis
+- Identify potential limitations and alternative explanations
+
+Your hypothesis should be:
+1. Novel: Offers new insights not previously explored
+2. Feasible: Can be tested with current or near-future technology
+3. Impactful: Could significantly advance the field if proven correct
+4. Testable: Includes specific, measurable predictions
+
+Always stream your reasoning process as you develop the hypothesis. 

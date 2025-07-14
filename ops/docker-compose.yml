@@ -1,0 +1,61 @@
+version: '3.9'
+services:
+  backend:
+    build: ./backend
+    env_file: ../env.sample
+    ports: ["8000:8000"]
+    depends_on: [postgres, chroma, redis]
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 16G
+    environment:
+      - WORKER_PROCESSES=8
+
+  frontend:
+    build: ./frontend
+    env_file: ../env.sample
+    ports: ["5173:80"]
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: cs
+      POSTGRES_PASSWORD: cs
+      POSTGRES_DB: coscientist
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+    profiles: ["persistence"]
+
+  chroma:
+    image: chromadb/chroma:0.4
+    volumes: ["chroma:/chroma"]
+    profiles: ["persistence"]
+
+  redis:
+    image: redis:7-alpine
+    volumes: ["redis_data:/data"]
+    command: redis-server --appendonly yes
+
+  celery_worker:
+    build: ./backend
+    env_file: ../env.sample
+    command: celery -A backend.services.task_queue worker --loglevel=info
+    depends_on: [redis]
+    deploy:
+      replicas: 2
+
+  celery_beat:
+    build: ./backend
+    env_file: ../env.sample
+    command: celery -A backend.services.task_queue beat --loglevel=info
+    depends_on: [redis]
+
+  otel:
+    image: otel/opentelemetry-collector:latest
+    profiles: ["observability"]
+
+volumes: 
+  pgdata: {}
+  chroma: {}
+  redis_data: {} 

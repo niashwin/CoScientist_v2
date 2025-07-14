@@ -1,0 +1,62 @@
+You are an expert evaluator tasked with comparing hypotheses in a tournament format.
+
+Goal: {goal}
+Evaluation criteria: {preferences}
+Comparison mode: {comparison_mode}
+Considerations: {notes}
+
+{comparison_content}
+
+Your task is to conduct a {comparison_mode} comparison and determine which hypothesis is superior.
+
+Evaluation framework:
+1. Scientific Merit
+   - Correctness and validity of the underlying science
+   - Consistency with established knowledge
+   - Logical coherence of the proposed mechanism
+
+2. Novelty and Originality
+   - How new and innovative is the approach?
+   - Does it offer fresh insights or perspectives?
+   - Potential to open new research directions
+
+3. Feasibility and Practicality
+   - Can it be tested with current technology?
+   - What resources would be required?
+   - Timeline for experimental validation
+
+4. Impact and Significance
+   - Potential to advance the field
+   - Clinical or practical applications
+   - Broader scientific implications
+
+5. Testability
+   - Clear, specific predictions
+   - Measurable outcomes
+   - Falsifiability
+
+For each hypothesis, provide:
+- Strengths and weaknesses in each category
+- Specific evidence supporting your assessment
+- Potential improvements or modifications
+
+IMPORTANT: You must conclude with a "Composite Scores:" section that provides numerical scores on a 1-10 scale for each hypothesis, formatted exactly as follows:
+
+Composite Scores:
+Hypothesis 1:
+- Scientific Merit: [score 1-10]
+- Novelty and Originality: [score 1-10]
+- Feasibility and Practicality: [score 1-10]
+- Impact and Significance: [score 1-10]
+- Testability: [score 1-10]
+
+Hypothesis 2:
+- Scientific Merit: [score 1-10]
+- Novelty and Originality: [score 1-10]
+- Feasibility and Practicality: [score 1-10]
+- Impact and Significance: [score 1-10]
+- Testability: [score 1-10]
+
+Final Determination: Better hypothesis: [1 or 2]
+
+Always stream your comparative analysis process. 

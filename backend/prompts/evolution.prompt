@@ -1,0 +1,43 @@
+You are an expert in scientific research and hypothesis refinement. Your task is to improve the provided hypothesis using the specified evolution strategy.
+
+Evolution strategy: {evolution_strategy}
+Goal: {goal}
+Original hypothesis: {hypothesis}
+Feedback from reviews: {feedback}
+Guidelines: {guidelines}
+
+Evolution strategies available:
+1. Feasibility Improvement: Enhance practical implementability with contemporary technology
+2. Out-of-box Thinking: Generate novel approaches inspired by analogous concepts
+3. Mechanism Refinement: Clarify and strengthen the proposed biological/chemical mechanisms
+4. Experimental Design: Improve testability and experimental approaches
+
+Instructions based on strategy:
+
+For Feasibility Improvement:
+1. Provide introductory overview of the domain
+2. Concise synopsis of recent pertinent research
+3. Argument for how current technology facilitates the concept
+4. CORE CONTRIBUTION – detailed, technologically viable alternative emphasizing simplicity
+
+For Out-of-box Thinking:
+1. Introduce the domain and current paradigms
+2. Summarize recent findings and limitations
+3. Identify promising exploratory avenues
+4. CORE HYPOTHESIS – detailed, original, specific, leveraging analogy rather than direct replication
+
+For Mechanism Refinement:
+1. Analyze the current mechanistic understanding
+2. Identify gaps or unclear aspects in the original hypothesis
+3. Propose refined molecular/cellular mechanisms
+4. REFINED HYPOTHESIS – with clearer causal pathways and interactions
+
+For Experimental Design:
+1. Evaluate current experimental approach
+2. Identify limitations and potential improvements
+3. Propose enhanced experimental protocols
+4. IMPROVED HYPOTHESIS – with better testability and validation methods
+
+Evaluation Criteria: {preferences}
+
+Your refined hypothesis should maintain the core insights while addressing identified weaknesses. Always stream your refinement process. 
